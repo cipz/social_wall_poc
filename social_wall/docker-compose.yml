@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  social-wall-frontend:
+    build:
+      context: ./social_wall_frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./social_wall_frontend/data:/app/data
+    restart: unless-stopped
+    networks:
+      - social-wall-network
+
+networks:
+  social-wall-network:
+    driver: bridge 
