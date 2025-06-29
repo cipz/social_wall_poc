@@ -5,6 +5,9 @@ export default async function Page() {
   // Function to generate random spacing between 20 and 40 pixels
   const getRandomSpacing = () => Math.floor(Math.random() * 21) + 20
 
+  // Function to generate random rotation between -15 and 15 degrees
+  const getRandomRotation = () => Math.floor(Math.random() * 31) - 15
+
   // Create 5 columns with different polaroids and random spacing
   // Distribute 9 polaroids across 5 columns: 4 columns with 2 polaroids each, 1 column with 1 polaroid
   const columns = Array.from({ length: 5 }, (_, columnIndex) => {
@@ -14,6 +17,7 @@ export default async function Page() {
       return {
         ...polaroidData[dataIndex],
         spacing: getRandomSpacing(),
+        rotation: getRandomRotation(),
       }
     })
   })
