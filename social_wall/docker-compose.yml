@@ -3,7 +3,7 @@ version: '3.8'
 services:
   social-wall-frontend:
     build:
-      context: ./social_wall_frontend
+      context: .
       dockerfile: Dockerfile
     ports:
       - "3003:3000"

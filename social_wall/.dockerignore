@@ -1,0 +1,11 @@
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker-compose.dev.yml
+README.md
+.git
+.gitignore
+social_wall_frontend/node_modules
+social_wall_frontend/.next
+social_wall_frontend/.vercel
+social_wall_frontend/pictures/ 
